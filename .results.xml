@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="8" name="pytest" skips="0" tests="8" time="0.501"><testcase classname="test.index_test.TestQueries" file="test/index_test.py" line="43" name="test_count_number_of_tech_companies" time="0.0016453266143798828"><failure message="AssertionError: None != (221.90999999999997,)">self = &lt;index_test.TestQueries testMethod=test_count_number_of_tech_companies&gt;
+
+    def test_count_number_of_tech_companies(self):
+        avg = avg_EV_of_dow_companies()
+        result = (221.90999999999997,)
+&gt;       self.assertEqual(avg, result)
+E       AssertionError: None != (221.90999999999997,)
+
+test/index_test.py:47: AssertionError</failure></testcase><testcase classname="test.index_test.TestQueries" file="test/index_test.py" line="5" name="test_return_apple" time="0.001501321792602539"><failure message="AttributeError: &apos;NoneType&apos; object has no attribute &apos;company&apos;">self = &lt;index_test.TestQueries testMethod=test_return_apple&gt;
+
+    def test_return_apple(self):
+        apple = return_apple()
+        result = &apos;Apple&apos;
+&gt;       self.assertEqual(apple.company, result)
+E       AttributeError: &apos;NoneType&apos; object has no attribute &apos;company&apos;
+
+test/index_test.py:9: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueries" file="test/index_test.py" line="38" name="test_return_conglomerates_and_pharmaceutical_companies" time="0.0016641616821289062"><failure message="AssertionError: None != [&apos;3M&apos;, &apos;General Electric&apos;, &apos;Johnson &amp; Joh[43 chars]ies&apos;]">self = &lt;index_test.TestQueries testMethod=test_return_conglomerates_and_pharmaceutical_companies&gt;
+
+    def test_return_conglomerates_and_pharmaceutical_companies(self):
+        conglomerceuticals = return_conglomerates_and_pharmaceutical_companies()
+        result = [&apos;3M&apos;, &apos;General Electric&apos;, &apos;Johnson &amp; Johnson&apos;, &apos;Merck&apos;, &apos;Pfizer&apos;, &apos;United Technologies&apos;]
+&gt;       self.assertEqual(conglomerceuticals, result)
+E       AssertionError: None != [&apos;3M&apos;, &apos;General Electric&apos;, &apos;Johnson &amp; Joh[43 chars]ies&apos;]
+
+test/index_test.py:42: AssertionError</failure></testcase><testcase classname="test.index_test.TestQueries" file="test/index_test.py" line="10" name="test_return_disneys_industry" time="0.0014667510986328125"><failure message="AssertionError: None != &apos;Broadcasting\xa0and\xa0entertainment&apos;">self = &lt;index_test.TestQueries testMethod=test_return_disneys_industry&gt;
+
+    def test_return_disneys_industry(self):
+        disney = return_disneys_industry()
+        result = &apos;Broadcasting\xa0and\xa0entertainment&apos;
+&gt;       self.assertEqual(disney, result)
+E       AssertionError: None != &apos;Broadcasting\xa0and\xa0entertainment&apos;
+
+test/index_test.py:14: AssertionError</failure></testcase><testcase classname="test.index_test.TestQueries" file="test/index_test.py" line="48" name="test_return_industry_and_its_total_EV" time="0.0014002323150634766"><failure message="AssertionError: None != [(&apos;Broadcasting\xa0and\xa0entertainment&apos;,[285 chars].64)]">self = &lt;index_test.TestQueries testMethod=test_return_industry_and_its_total_EV&gt;
+
+    def test_return_industry_and_its_total_EV(self):
+        industry_ev = return_industry_and_its_total_EV()
+        result = [(&apos;Broadcasting\xa0and\xa0entertainment&apos;, 172.31), (&apos;Conglomerate&apos;, 482.95), (&apos;Consumer products&apos;, 1217.87), (&apos;Financial services&apos;, 73.86000000000001), (&apos;Managed health care&apos;, 233.23), (&apos;Manufacturing&apos;, 494.19000000000005), (&apos;Oil &amp; gas&apos;, 636.48), (&apos;Pharmaceuticals&apos;, 775.82), (&apos;Technology&apos;, 2260.95), (&apos;Telecommunication&apos;, 309.64)]
+&gt;       self.assertEqual(industry_ev, result)
+E       AssertionError: None != [(&apos;Broadcasting\xa0and\xa0entertainment&apos;,[285 chars].64)]
+
+test/index_test.py:52: AssertionError</failure></testcase><testcase classname="test.index_test.TestQueries" file="test/index_test.py" line="15" name="test_return_list_of_company_objects_ordered_alphabetically_by_symbol" time="0.0014274120330810547"><failure message="TypeError: &apos;NoneType&apos; object is not iterable">self = &lt;index_test.TestQueries testMethod=test_return_list_of_company_objects_ordered_alphabetically_by_symbol&gt;
+
+    def test_return_list_of_company_objects_ordered_alphabetically_by_symbol(self):
+        companies = return_list_of_company_objects_ordered_alphabetically_by_symbol()
+        def format():
+            result_arr = []
+            for company in companies:
+                result_arr.append(company.company)
+            return result_arr
+    
+        result = [&apos;Apple&apos;, &apos;American Express&apos;, &apos;Boeing&apos;, &apos;Caterpillar&apos;, &apos;Cisco Systems&apos;, &apos;Chevron&apos;, &apos;Walt Disney&apos;, &apos;DowDuPont&apos;, &apos;General Electric&apos;, &apos;Goldman Sachs&apos;, &apos;The Home Depot&apos;, &apos;IBM&apos;, &apos;Intel&apos;, &apos;Johnson &amp; Johnson&apos;, &apos;JPMorgan Chase&apos;, &apos;Coca-Cola&apos;, &quot;McDonald&apos;s&quot;, &apos;3M&apos;, &apos;Merck&apos;, &apos;Microsoft&apos;, &apos;Nike&apos;, &apos;Pfizer&apos;, &apos;Procter &amp; Gamble&apos;, &apos;Travelers&apos;, &apos;UnitedHealth Group&apos;, &apos;United Technologies&apos;, &apos;Visa&apos;, &apos;Verizon&apos;, &apos;Walmart&apos;, &apos;ExxonMobil&apos;]
+    
+&gt;       self.assertEqual(format(), result)
+
+test/index_test.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def format():
+        result_arr = []
+&gt;       for company in companies:
+E       TypeError: &apos;NoneType&apos; object is not iterable
+
+test/index_test.py:20: TypeError</failure></testcase><testcase classname="test.index_test.TestQueries" file="test/index_test.py" line="33" name="test_return_list_of_consumer_products_companies_with_EV_above_225" time="0.0013346672058105469"><failure message="AssertionError: None != [{&apos;name&apos;: &apos;The Home Depot&apos;}, {&apos;name&apos;: &apos;Walmart&apos;}]">self = &lt;index_test.TestQueries testMethod=test_return_list_of_consumer_products_companies_with_EV_above_225&gt;
+
+    def test_return_list_of_consumer_products_companies_with_EV_above_225(self):
+        cos = return_list_of_consumer_products_companies_with_EV_above_225()
+        result = [{&apos;name&apos;: &apos;The Home Depot&apos;}, {&apos;name&apos;: &apos;Walmart&apos;}]
+&gt;       self.assertEqual(cos, result)
+E       AssertionError: None != [{&apos;name&apos;: &apos;The Home Depot&apos;}, {&apos;name&apos;: &apos;Walmart&apos;}]
+
+test/index_test.py:37: AssertionError</failure></testcase><testcase classname="test.index_test.TestQueries" file="test/index_test.py" line="27" name="test_return_list_of_dicts_of_tech_company_names_and_their_EVs_ordered_by_EV_descending" time="0.0013508796691894531"><failure message="AssertionError: None != [{&apos;company&apos;: &apos;Apple&apos;, &apos;EV&apos;: 954.8}, {&apos;com[142 chars].31}]">self = &lt;index_test.TestQueries testMethod=test_return_list_of_dicts_of_tech_company_names_and_their_EVs_ordered_by_EV_descending&gt;
+
+    def test_return_list_of_dicts_of_tech_company_names_and_their_EVs_ordered_by_EV_descending(self):
+        tech = return_list_of_dicts_of_tech_company_names_and_their_EVs_ordered_by_EV_descending()
+    
+        result = [{&apos;company&apos;: &apos;Apple&apos;, &apos;EV&apos;: 954.8}, {&apos;company&apos;: &apos;Microsoft&apos;, &apos;EV&apos;: 708.61}, {&apos;company&apos;: &apos;Intel&apos;, &apos;EV&apos;: 244.6}, {&apos;company&apos;: &apos;IBM&apos;, &apos;EV&apos;: 178.63}, {&apos;company&apos;: &apos;Cisco Systems&apos;, &apos;EV&apos;: 174.31}]
+&gt;       self.assertEqual(tech, result)
+E       AssertionError: None != [{&apos;company&apos;: &apos;Apple&apos;, &apos;EV&apos;: 954.8}, {&apos;com[142 chars].31}]
+
+test/index_test.py:32: AssertionError</failure></testcase></testsuite>
